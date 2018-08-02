@@ -1,0 +1,7 @@
+1- to log into the control panel:
+your_host/login
+
+2- the username -> admin & the password -> 123
+
+3- to add new posts/categories:
+your_host/cp

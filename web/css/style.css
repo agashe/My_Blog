@@ -1,0 +1,344 @@
+/*---------------------------[public]---------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{background-color: #F9F9F9; height: 100%;}
+
+.container{
+    padding: 50px;
+    clear: both;
+    overflow: hidden;
+}
+/*---------------------------[public]---------------------------*/
+
+/*---------------------------[responsive]---------------------------*/
+/*---------------------------[responsive]---------------------------*/
+
+/*---------------------------[header]---------------------------*/
+header{
+    height: 130px;
+    width: 100%;
+    background-color: #282828;
+}
+header h1{
+    padding: 35px;
+    font-family: Tahoma;
+    font-size: 2.5em;
+}
+header a{
+    text-decoration: none;
+    color: #FFF;
+}
+/*---------------------------[header]---------------------------*/
+
+/*---------------------------[content]---------------------------*/
+.content{
+    width: 70%;
+    float: left;
+}
+
+/*--------------[post-baner]--------------*/
+.post-baner{
+    min-height: 100px;
+    width: 800px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid rgb(165, 166, 168);
+    background-color: #FFF; 
+}
+.post-baner a{text-decoration: none;}
+.post-baner a h1{
+    margin: 15px 5px 15px 5px;
+    font-family: Tahoma;
+    font-size: 1.7em;
+    color: #000;
+}
+.post-baner h4{
+    margin: 10px;
+    font-family: Tahoma;
+    font-size: 0.9em;
+}
+/*--------------[post-baner]--------------*/
+
+/*--------------[login-form]--------------*/
+.login-form{
+    margin: 10px;
+    padding: 10px;
+}
+.login-form h1{
+    font-family: Tahoma;
+    font-size: 1.5em;
+    color: #000;
+}
+.login-form h2{
+    margin: 15px 0 15px 0;
+    font-family: Tahoma;
+    font-size: 1.1em;
+}
+.login-form input[type=text], .login-form input[type=password]{
+    height: 25px;
+    width: 600px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+.login-form button{
+    height: 40px;
+    width: 140px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+}
+.login-form button:hover{
+    background-color: #F9F9F9;
+    color: #000;
+}
+/*--------------[login-form]--------------*/
+
+/*--------------[control-panel]--------------*/
+.control-panel{
+    margin: 10px;
+    padding: 10px;
+}
+.control-panel h1{
+    height: 30px;
+    width: 650px;
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid rgb(165, 166, 168);
+    background-color: #FFF; 
+    font-family: Tahoma;
+    font-size: 1.5em;
+}
+.control-panel a{
+    text-decoration: none;
+    color: #000;
+}
+.control-panel a:hover{
+    text-decoration: underline;
+}
+/*--------------[control-panel]--------------*/
+
+/*--------------[add-post-form]--------------*/
+.add-post-form{
+    margin: 10px;
+    padding: 10px;
+}
+.add-post-form h1{
+    font-family: Tahoma;
+    font-size: 1.5em;
+    color: #000;
+}
+.add-post-form h2{
+    margin: 15px 0 15px 0;
+    font-family: Tahoma;
+    font-size: 1.1em;
+}
+.add-post-form input[type=text]{
+    height: 25px;
+    width: 600px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+.add-post-form select{
+    height: 40px;
+    width: 610px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1em;
+    resize: none;
+}
+.add-post-form textarea{
+    height: 300px;
+    width: 600px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.5em;
+    resize: none;
+}
+.add-post-form button{
+    height: 40px;
+    width: 140px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+}
+.add-post-form button:hover{
+    background-color: #F9F9F9;
+    color: #000;
+}
+/*--------------[add-post-form]--------------*/
+
+/*--------------[add-category-form]--------------*/
+.add-category-form{
+    margin: 10px;
+    padding: 10px;
+}
+.add-category-form h1{
+    font-family: Tahoma;
+    font-size: 1.5em;
+    color: #000;
+}
+.add-category-form h2{
+    margin: 15px 0 15px 0;
+    font-family: Tahoma;
+    font-size: 1.1em;
+}
+.add-category-form input[type=text]{
+    height: 25px;
+    width: 600px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+.add-category-form button{
+    height: 40px;
+    width: 140px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+}
+.add-category-form button:hover{
+    background-color: #F9F9F9;
+    color: #000;
+}
+/*--------------[add-category-form]--------------*/
+
+/*--------------[post]--------------*/
+.post h1{
+    margin: 0 0 10px 0;
+    font-family: Tahoma;
+    font-size: 2.5em;
+}
+.post h4{
+    margin: 0 0 10px 0;
+    font-family: Tahoma;
+    font-size: 0.8em;
+}
+#post-content-field{
+    margin: 20px 0 15px 0;
+    font-family: Tahoma;
+    font-size: 1.4em;
+}
+.post p{
+    margin: 10px 0 10px 0;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.add-comment-form input[type=text]{
+    height: 30px;
+    width: 850px;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    font-size: 1.3em;
+    resize: none;
+}
+.add-comment-form textarea{
+    height: 200px;
+    width: 850px;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    font-size: 1.3em;
+    resize: none;
+}
+.add-comment-form button{
+    height: 30px;
+    width: 100px;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    border: none;
+    background-color: #000;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+}
+.add-comment-form button:hover{
+    background-color: #F9F9F9;
+    color: #000;
+}
+/*--------------[post]--------------*/
+
+/*--------------[comment]--------------*/
+.comment{
+    min-height: 80px;
+    width: 800px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid rgb(165, 166, 168);
+    background-color: #FFF; 
+}
+.comment h1{
+    font-family: Tahoma;
+    font-size: 1em;
+}
+.comment h4{
+    font-family: Tahoma;
+    font-size: 0.6em;
+}
+.comment span{
+    font-family: Tahoma;
+    font-size: 1.4em;
+}
+/*--------------[comment]--------------*/
+
+/*---------------------------[content]---------------------------*/
+
+/*---------------------------[side-menu]---------------------------*/
+.side-menu{
+    width: 30%;
+    float: left;
+}
+.categories{
+    height: 400px;
+    width: 250px;
+    float: right;
+    padding: 15px;
+    font-family: Tahoma;
+    border: 1px solid rgb(165, 166, 168);
+    background-color: #FFF; 
+}
+.categories ul{
+    margin-left: 15px;
+}
+.categories ul li a{
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 1em;
+    color: #000;
+}
+.categories ul li a:hover{
+    text-decoration: underline;
+}
+/*---------------------------[side-menu]---------------------------*/
+
+/*---------------------------[footer]---------------------------*/
+footer{
+    height: 30px;
+    width: 100%;
+    margin: 30px 0 0 0;
+}
+footer span{
+    margin: 10px;
+    color: #282828;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 1em;
+}
+/*---------------------------[footer]---------------------------*/

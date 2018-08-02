@@ -1,0 +1,52 @@
+{# Extend Base #}
+{% extends 'Base.html.twig' %}
+
+{% block title %}
+    <title>My_Blog | {{ post["p_title"] }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="post">
+    <h1>{{ post["p_title"] }}</h1>
+    <h4><span class="icon icon-time"></span> {{ post["p_date"]|date("m/d/Y g:ia") }} | {{ post["p_cat"] }}</h4>
+                
+    <hr>
+    <br>
+    <span id="post-content-field" >
+        {{ post["p_content"] }}
+    </span>
+    <br><br>
+
+    
+    <hr>
+    <p>Add Comment</p>
+    <div class="add-comment-form">
+        <form method="POST">
+            <input type="text" name="comment-email" id="comment-email" placeholder="Your Email Adress">
+            <textarea name="comment-body" id="comment-body" cols="30" rows="10"></textarea><br>
+            <button type="submit" name="add-comment" id="add-comment">ADD!!</button>
+        </form>
+    </div>     
+    <br>
+    
+    
+    <hr>
+    <p>Comments</p> 
+    {% if comments == null %}
+        <center><h4>No commnets yet, be the first</h4></center>
+    {% else %}
+        {% for c in comments %}
+            <div class="comment">
+                <h1>{{ c["cVisitorEmail"] }}</h1>
+                <h4><span class="icon icon-time"></span> {{ c["cDate"]|date("m/d/Y g:ia") }}</h4>
+                <hr>
+                <span>
+                    {{ c["cContent"] }}
+                </span>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>         
+{% endblock %}
+
+            

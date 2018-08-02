@@ -1,0 +1,22 @@
+{# Extend Base #}
+{% extends 'Base.html.twig' %}
+
+{% block title %}
+    <title>My_Blog | {{ cat_name }}</title>
+{% endblock %}
+
+{% block content %}
+    {% if posts is empty %}
+        <h2>Sorry, There is no posts in "{{ cat_name }}" yet!</h2>
+    {% endif %}
+
+    {% for post in posts %}
+    <div class="post-baner">
+        <a href="{{ path('post', {'post_id': post["pId"], 'post_title': post["pTitle"]}) }}" target="_blank"><h1>{{ post["pTitle"] }}</h1></a>
+        <hr>
+        <h4><span class="icon icon-time"></span> {{ post["pDate"]|date("m/d/Y g:ia") }} | {{ post["pCat"] }}</h4>
+    </div>   
+    {% endfor %}            
+{% endblock %}
+            
+        

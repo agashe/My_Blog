@@ -1,0 +1,32 @@
+{# Extend Base #}
+{% extends 'Base.html.twig' %}
+
+{% block title %}
+    <title>My_Blog | Login</title>
+{% endblock %}
+
+{% block content %}
+<div class="login-form">
+    <h1>Login</h1>
+    
+    {% if error == true %}
+        <br>
+        <h3 style="color:red;">* Invalid Username or Password!</h3>
+    {% endif %}
+    
+    <br>
+    
+    <form action="{{ path('login') }}" method="POST">
+        <h2>Username</h2>
+        <input type="text" name="username" id="username">
+
+        <h2>Password</h2>
+        <input type="password" name="password" id="password">
+        <br>
+
+        <button class="icon icon-login" type="submit" name="ok"> OK </button>
+    </form>
+</div>         
+{% endblock %}
+
+            

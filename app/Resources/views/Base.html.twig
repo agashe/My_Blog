@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icons/fonts.css') }}">
+
+    <script src="{{ asset('js/jquery-1.10.0.min.js') }}"></script>
+
+    <link rel="shortcut icon" href="{{ asset('icon.ico') }}" type="image/x-icon">
+
+    {% block title %}
+        <title>My_Blog</title>
+    {% endblock %}
+</head>
+<body>
+    <!-----------[header]------------>
+    <header>
+        <h1><a href="{{ path('homepage') }}">#My_Blog</a></h1>
+    </header>
+    <!-----------[header]------------>
+    
+
+    <div class="container">
+        <!-----------[content]------------>
+        <div class="content">
+            {% for flash_message in app.session.flashBag.get('notice') %}
+                <script>
+                    alert('{{ flash_message }}');
+                </script>
+            {% endfor %}
+
+            {% block content %}
+                {# My Template #}
+            {% endblock %}
+        </div>
+        <!-----------[content]------------>
+
+        <!-----------[side-menu]------------>
+        <div class="side-menu">
+            <div class="categories">
+                <h2>Categories</h2><br>
+                <ul>
+                    {% for cat in categories %}
+                        <li><a href="{{ path('category', {'cat_name': cat["catName"]}) }}">{{ cat["catName"] }}</a></li>
+                    {% endfor %} 
+                </ul>
+            </div>
+        </div>
+        <!-----------[side-menu]------------>
+    </div>
+
+
+    <!-----------[footer]------------>
+    <footer>
+        <span>My_Blog &copy; 2018</span>
+    </footer>
+    <!-----------[footer]------------>
+</body>
+</html>

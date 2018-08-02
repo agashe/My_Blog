@@ -1,0 +1,30 @@
+{# Extend Base #}
+{% extends 'Base.html.twig' %}
+
+{% block title %}
+    <title>My_Blog | Add Category</title>
+{% endblock %}
+
+{% block content %}
+<div class="add-category-form">
+    <h1>Add New Category</h1>
+    
+    {% if error == true %}
+        <br>
+        <h3 style="color:red;">* Please enter category name!</h3>
+    {% endif %}
+    
+    <br>
+    
+    <form action="{{ path('add-category') }}" method="POST">
+        <h2>Category Name</h2>
+        <input type="text" name="cat-name" id="cat-name">
+
+        <br>
+
+        <button class="icon icon-plus" type="submit" name="add"> ADD</button>
+    </form>
+</div>         
+{% endblock %}
+
+            

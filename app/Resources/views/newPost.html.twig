@@ -1,0 +1,41 @@
+{# Extend Base #}
+{% extends 'Base.html.twig' %}
+
+{% block title %}
+    <title>My_Blog | Add Post</title>
+{% endblock %}
+
+{% block content %}
+<div class="add-post-form">
+    <h1>Add New Post</h1>
+    
+    {% if error == true %}
+        <br>
+        <h3 style="color:red;">* Please enter all the data!</h3>
+    {% endif %}
+    
+    <br>
+    
+    <form action="{{ path('add-post') }}" method="POST">
+        <h2>Post title</h2>
+        <input type="text" name="post-title" id="post-title">
+
+        <h2>Post category</h2>
+        <select name="post-category">
+            <option>--Select--</option>
+            {% for cat in categories %}
+                <option>{{ cat["catName"] }}</option>
+            {% endfor %} 
+        </select>
+
+        <h2>Post content</h2>
+        <textarea name="post-content" id="post-content" cols="30" rows="10"></textarea>
+
+        <br>
+
+        <button class="icon icon-plus" type="submit" name="add"> ADD </button>
+    </form>
+</div>         
+{% endblock %}
+
+            

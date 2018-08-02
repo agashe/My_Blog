@@ -1,0 +1,15 @@
+{# Extend Base #}
+{% extends 'Base.html.twig' %}
+
+{% block title %}
+    <title>My_Blog | Control Panel</title>
+{% endblock %}
+
+{% block content %}
+<div class="control-panel">
+    <h1><a href="{{ path('add-post') }}">Add New Post</a></h1>
+    <h1><a href="{{ path('add-category') }}">Add New Category</a></h1>
+</div>         
+{% endblock %}
+
+            
