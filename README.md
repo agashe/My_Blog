@@ -1,2 +1,2 @@
 # My_Blog
-A simple blog using Symphony.
+A simple blog using Symfony.
